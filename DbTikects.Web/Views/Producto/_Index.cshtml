@@ -1,0 +1,80 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+
+@model IPagedList<DbTikets.Domain.Producto>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Categoria
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SingleOrDefault().Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SingleOrDefault().Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SingleOrDefault().Precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SingleOrDefault().Stock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SingleOrDefault().Foto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SingleOrDefault().Descontinuado)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoriaId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Foto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descontinuado)
+            </td>
+            <td>
+                @Ajax.ActionLink("Editar", "Edit", new {id = item.Id}, new AjaxOptions()
+                {
+                    UpdateTargetId = "form",
+                    HttpMethod = "Get",
+                    InsertionMode = InsertionMode.Replace
+                }) |
+                @Html.ActionLink("Details", "Details", new {id = item.Id}) |
+                @Html.ActionLink("Delete", "Delete", new {id = item.Id})
+            </td>
+        </tr>
+    }
+
+</table>
+
+@Html.PagedListPager(Model, page=>Url.Action("Index",new {page,criterio = ViewBag.Criterio}),
+    PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions()
+    {
+        UpdateTargetId = "search_result",
+        HttpMethod = "Get",
+        InsertionMode = InsertionMode.Replace
+    }))

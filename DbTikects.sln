@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentacion", "Presentacion", "{C6C43F19-268D-49E2-852F-16176262B429}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recursos", "Recursos", "{1B7232BD-DCE7-4A53-9623-770EB015F191}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Negocio", "Negocio", "{C4D1A844-34C5-450F-97B6-2E28044E035A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbTikects.Repository", "DbTikects.Repository\DbTikects.Repository.csproj", "{6527D2F3-E727-4235-B8A2-A27B07E3003B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbTikets.Service", "DbTikets.Service\DbTikets.Service.csproj", "{F8C31DE2-D1B0-45B8-8D20-554EF87E6B72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbTikets.Domain", "DbTikets.Domain\DbTikets.Domain.csproj", "{21C0AF89-AA35-44D7-B50C-DC6966DB0C85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbTikects.Web", "DbTikects.Web\DbTikects.Web.csproj", "{97E26264-D22F-43E5-8BF0-18F350077186}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{280474ED-BC25-4640-98B4-F4C3CF65C839}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6527D2F3-E727-4235-B8A2-A27B07E3003B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6527D2F3-E727-4235-B8A2-A27B07E3003B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6527D2F3-E727-4235-B8A2-A27B07E3003B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6527D2F3-E727-4235-B8A2-A27B07E3003B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8C31DE2-D1B0-45B8-8D20-554EF87E6B72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8C31DE2-D1B0-45B8-8D20-554EF87E6B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8C31DE2-D1B0-45B8-8D20-554EF87E6B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8C31DE2-D1B0-45B8-8D20-554EF87E6B72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21C0AF89-AA35-44D7-B50C-DC6966DB0C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21C0AF89-AA35-44D7-B50C-DC6966DB0C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21C0AF89-AA35-44D7-B50C-DC6966DB0C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21C0AF89-AA35-44D7-B50C-DC6966DB0C85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97E26264-D22F-43E5-8BF0-18F350077186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97E26264-D22F-43E5-8BF0-18F350077186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97E26264-D22F-43E5-8BF0-18F350077186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97E26264-D22F-43E5-8BF0-18F350077186}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6527D2F3-E727-4235-B8A2-A27B07E3003B} = {1B7232BD-DCE7-4A53-9623-770EB015F191}
+		{F8C31DE2-D1B0-45B8-8D20-554EF87E6B72} = {C4D1A844-34C5-450F-97B6-2E28044E035A}
+		{21C0AF89-AA35-44D7-B50C-DC6966DB0C85} = {C4D1A844-34C5-450F-97B6-2E28044E035A}
+		{97E26264-D22F-43E5-8BF0-18F350077186} = {C6C43F19-268D-49E2-852F-16176262B429}
+	EndGlobalSection
+EndGlobal

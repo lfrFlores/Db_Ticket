@@ -1,0 +1,46 @@
+﻿
+
+@model PagedList.IPagedList<DbTikets.Domain.Producto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Ajax.ActionLink("Registra Nuevo", "Create", null,
+        new AjaxOptions()
+        {
+            UpdateTargetId = "form",
+            HttpMethod = "Get",
+            InsertionMode = InsertionMode.Replace
+        },new {@class = "btn btn-success"})
+</p>
+
+<div class="row">
+    <div id="form" class="col-sm-3">
+        @Html.Action("Create")
+    </div>
+    <div class="col-sm-9">
+        @using (Ajax.BeginForm("Index",new AjaxOptions()
+        {
+            UpdateTargetId = "search_result",
+            HttpMethod = "Get",
+            InsertionMode = InsertionMode.Replace
+        }))
+        {
+            <div class="form-inline">
+                <div class="form-group">
+                    @Html.Label("criterio", "Criterio")
+                    @Html.TextBox("criterio", null, new { @class = "form-control" })
+                    <button class="btn btn-darnger">Buscar</button>
+                </div>
+            </div>
+        }
+        <div id="search_result">
+            @Html.Partial("_Index",Model)
+        </div>
+    </div>
+</div>
+
