@@ -11,5 +11,7 @@ namespace DbTikets.Domain
         public Int32 Id { get; set; }
         public string Descripcion { get; set; }
         public string Comentario { get; set; }
+
+        public Int16 Taaa { get; set; }
     }
 }
